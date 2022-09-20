@@ -21,12 +21,11 @@ class AVeryBigSum {
      * The function accepts LONG_INTEGER_ARRAY ar as parameter.
      */
 
-    public static long aVeryBigSum(List<Long> ar) {
+    public static long aVeryBigSum1(List<Long> ar) {
         // Write your code here
         long sum = 0;
         for(int i = 0; i< ar.size();i++){
             sum = sum +(ar.get(i));
-
         }
         return sum;
 
