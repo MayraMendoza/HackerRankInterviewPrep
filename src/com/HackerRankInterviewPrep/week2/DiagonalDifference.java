@@ -11,13 +11,14 @@ public class DiagonalDifference {
 //            4 5 6
 //            9 8 9
 //    The left-to-right diagonal = 1+5 +9 =15. The right to left diagonal = 3+5+9=17 . Their absolute difference is |15-17|=2 .
-
+// may be simplified with a while loop.
     public static int diagonalDifference(List<List<Integer>> arr) {
         // Write your code here\
         int LtoRDiagonal = 0;
         int addLtoRD =0;
         int rToLDiagonal = 0;
         int addRtoL = 0;
+
 
         for(int i =0 ; i< arr.size(); i++){
             for(int j = 0 ; j<arr.get(i).size(); j++){
