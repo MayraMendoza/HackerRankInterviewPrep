@@ -9,4 +9,25 @@ package com.HackerRankInterviewPrep.week2;
  */
 
 public class CountingValleys {
+
+//    public static int countingValleys(int steps, String path) {
+//        return 0;
+//
+//        DDUUDDUDUUUD
+      // where d is down and u is up\
+    // mountain - consecutive steps above sea level. - starting with a step up from sea level and ending with a step  down to sea level
+
+    // valley - consecutive steps below sea level, starting with a step down to sea level and ending with a step up to sea level
+    //
+    int position =0;
+    // D = -1 , U = 1, sea level =0;
+
+    //  if position = 0 , if u if u = valley -> count 1
+    // now you are in the negative if you go to a positive/o then other valley.
+
+//
+//
+//    }
+
+
 }
