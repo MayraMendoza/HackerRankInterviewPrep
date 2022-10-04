@@ -25,6 +25,8 @@ public class CountingValleys {
     //  if position = 0 , if u if u = valley -> count 1
     // now you are in the negative if you go to a positive/o then other valley.
 
+    // CAN DO A BOOLEAN
+
 //
 //
 //    }
