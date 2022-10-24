@@ -1,5 +1,7 @@
 package com.HackerRankInterviewPrep.week4;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -9,42 +11,22 @@ import java.util.List;
 
 public class LeftRotation {
     public static List<Integer> rotateLeft(int d, List<Integer> arr) {
-        // Write your code here
-        // d the amount spaces needed to rotate to the left
-        // arr the array
+        int arraySize= arr.size();
 
-        // if negative then array lenght  (array size 5) d =5
-        //  0-5 =-5
-        // moved to index 1
+        ArrayList<Integer> Rotation = new ArrayList<>(Collections.nCopies(arraySize, 0));
 
+        for(int i=0 ; i<arr.size(); i++){
+            int number = arr.get(i);
+            int moveToIndex = i-d;
 
-        // array lenght =5  index =1 -5 (-4)
-        // moved to index  2
-
-        // arr lenght 5 index = 2 -5 (-3)
-        // move to index 3
-        // length 5 shift 4
-        //
-        // 0->1. // 5-4-0=1
-        // 1->2. // 5-4 +1 =2
-        // 2->3  // 5-4+2 = 3
-        // 3->4. // 5-4+3 = 4
-        // 4->0.  // 5-4+4
-
-
-
-
-        // different array length 45
-        // d =17
-
-        // index 0 - 17 = -17
-        // needs to be put in index (27)
-
-        // index 17 --> index 0 ;
-        // index 18 --> index 1 ;
-
-
-
+            if(moveToIndex <0){
+                moveToIndex = (moveToIndex + arr.size());
+                Rotation.set(moveToIndex, number);
+            }else{
+                Rotation.set(moveToIndex, number);
+            }
+        }
+        return Rotation;
 
     }
 
