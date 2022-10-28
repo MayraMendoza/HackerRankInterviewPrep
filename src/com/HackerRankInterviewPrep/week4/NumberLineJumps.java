@@ -18,8 +18,14 @@ public class NumberLineJumps {
         // x2= 1
         // v2= 2
         //
-        //
-        return "yes or no";
+        for(int i=0; i<10000; i++){
+            if(x1 + (i*v1) == x2 +(i*v2)){
+                return "YES";
+
+            }
+
+        }
+        return "NO";
 
     }
 }
