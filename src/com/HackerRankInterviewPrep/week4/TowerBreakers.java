@@ -18,6 +18,23 @@ package com.HackerRankInterviewPrep.week4;
  * 6--> 3 (6%3==0)
  * 3-->1 ( 3-2=1 )  x=3  y=1  3%1==0
  *
+ *    3-1 =2  3%2
+ *    6-5 =1  6%1
+ *    2-1 =1  2%1 ==0 yes
+ *    // what numbers leave 1 as the loser
+ *
+ *
+ *    7-6 =1  7%2
+ *    1
+ *    3
+ *    5 -4 = 1      5 will leave 1 as the loser
+ *    6 -2 = 3     6%3  -> 3-2=1
+ *    7 -6 = 1
+ *    9-6=3 (6 or 8)
+ *    10 - 2=5  10%5 yes
+ *    13
+ *
+ *
  *
  *
  * tower 2
@@ -33,11 +50,30 @@ public class TowerBreakers {
 
         // **move 5 and leaves 1** 1 is divisible by future remove  ???
         //
+        if( n% 2!= 0 && n%3!=0){
+            if(m%2 !=0 && m%3 !=0){
+                return 1;
 
-
+            }else{
+                System.out.print("n");
+                return 2;
+            }
+        }
+        else{
+            if(m%2!= 0){
+                return 2;
+            }else{
+                return 1;
+            }
+        }
 
     }
+
+
+
+
 }
+
 
 //if( n% 2!= 0){
 //        return 1;
