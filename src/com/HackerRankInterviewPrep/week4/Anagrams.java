@@ -15,6 +15,7 @@ public class Anagrams {
         // 2 - compare each letter see how many are different (subtract
 //        difference from lenght = how many will need to be changed so string a will be
 //        the same as string b).
+
         ArrayList<Character> firstHalf = new ArrayList<>();
         ArrayList<Character> secondHalf = new ArrayList<>();
         String fHalf = "";
@@ -72,7 +73,23 @@ public class Anagrams {
 //        sHalf = s.substring(halfString);
 //        //  System.out.println(fHalf);
 //        //  System.out.println(sHalf);
+
+// here we can make two for loops comparing each array
 //        for(int i=0; i<stringSize/2;i++){
+//            //when i = index 0
+//            for(int j=0+i; j<stringSize/2; j++){
+//                // check if any of these are present
+//                // since both arrays are sorted once j is checked it will go to the next letter.
+//                // break
+//                // if array doesn't break than add to a counter.
+// the counter should return the numbers of letters that will have to be switched.
+//
+//
+//        }
+//        }
+
+
+
 //
 //        if(firstHalfM.containsKey(fHalf.charAt(i))){
 //        int n = firstHalfM.get(fHalf.charAt(i))+1;
