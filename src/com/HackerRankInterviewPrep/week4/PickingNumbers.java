@@ -17,25 +17,28 @@ public class PickingNumbers {
         int countLongestSubarray = 0;
         int count =0;
 
-        for(int i=0; i< a.size()-1; i++){
-            //System.out.println(a.get(i)+" "+ a.get(i+1));
-            //System.out.println( Math.abs(a.get(i+1)- a.get(i)));
-            if(Math.abs(a.get(i)- a.get(i+1))<=1){
-                //System.out.print("this");
-                count++;
-                //System.out.println("Count =" +count);
 
-            }else{
-                System.out.print("else");
-                if(countLongestSubarray<count){
+        for(int i = 0; i < a.size()-1;i++){
+            count =0;
+            for(int j = 0+i; j < a.size()-i; j++ ){
+                System.out.println("i"+a.get(i));
+                System.out.println("j" + a.get(j));
+                if(Math.abs(a.get(i)- a.get(j))<=1){
+                    count++;
+                    System.out.println(count);
 
-                    countLongestSubarray =count;
-                    //System.out.println("Count longest sub"+countLongestSubarray);
-                    count = 0;
+                } else {
+
+                    System.out.print("break");
+                    break;
                 }
-            }
-            countLongestSubarray =count;
 
+
+            }
+            if(countLongestSubarray<count && count<= a.size()){
+                countLongestSubarray = count;
+                count=0;
+            }
         }
 
 
