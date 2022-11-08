@@ -10,43 +10,44 @@ import java.util.Collections;
  */
 public class Anagrams {
     public static int anagram(String s) {
-        // Write your code here
-        // if string is an odd number return -1
-        // 2 - compare each letter see how many are different (subtract
-//        difference from lenght = how many will need to be changed so string a will be
-//        the same as string b).
-
         ArrayList<Character> firstHalf = new ArrayList<>();
         ArrayList<Character> secondHalf = new ArrayList<>();
-        String fHalf = "";
-        String sHalf= "";
-        int stringSize = s.length();
-        int halfString =0;
-        System.out.println(s);
-        int difference =0;
-        if( stringSize %2 == 0){
-            halfString = stringSize /2;
-            fHalf = s.substring(0, halfString);
-            sHalf = s.substring(halfString);
-            System.out.println(fHalf + " " + sHalf);
-            for(int i =0; i<fHalf.length(); i++){
+        int count =0;
+        int jj=0;
+        int halfSize = s.length()/2;
+        if( s.length()%2==0){
+            String fHalf = s.substring(0,halfSize);
+            String sHalf = s.substring(halfSize);
+            for (int i= 0; i<halfSize; i++){
                 firstHalf.add(fHalf.charAt(i));
                 secondHalf.add(sHalf.charAt(i));
             }
             Collections.sort(firstHalf);
             Collections.sort(secondHalf);
-            for(int j =0; j<fHalf.length();j++ ){
-                if(firstHalf.get(j)!= secondHalf.get(j)){
-                    difference++;
+
+            // i search for this letter
+            // once its found loop will now continue in index that it was found in
+
+            for(int i=0; i<halfSize; i++){
+                for(int j=jj; j<halfSize; j++){
+                    if(firstHalf.get(i)== secondHalf.get(j)){
+                        jj=j+1;
+                        // System.out.println(jj);
+                        count ++;
+                        break;
+                    }
+
                 }
             }
-        } else{
+
+
+
+        }else {
             return -1;
         }
-        //  System.out.print(firstHalf);
-        //  System.out.print(secondHalf);
-        return difference;
-    } }
+        return halfSize- count ;
+    }
+    }
 
 
 
