@@ -19,23 +19,44 @@ import java.util.ArrayList;
 public class SeparateTheNumbers {
     public static void separateNumbers(String s) {
         // Write your code here
-        int initialNumber = 0;
-        String news= "";
-        ArrayList<String> newString = new ArrayList<>();
+        System.out.println(s);
 
-        for(int i= 0 ; i<s.length()-1; i++){
+        // num%9==0
+        // -->then might have another digit.
 
-            if(Character.valueOf(s.charAt(0))>Character.valueOf(s.charAt(0))){
-                System.out.print("test");
-            }
+        // tackling from the back --
+        // use recursion
 
-
-
+        // grab numbers and put it in an array -- pull from the array -- need to see how 100-99
+        // will be parsed out
 
 
+
+        for(int i=0; i<s.length(); i++){
+            // System.out.println(i);
+            System.out.println(s.substring(i, i+1));
         }
-        System.out.print(news);
-
 
     }
-}
+    }
+//        // Write your code here
+//        int initialNumber = 0;
+//        String news= "";
+//        ArrayList<String> newString = new ArrayList<>();
+//
+//        for(int i= 0 ; i<s.length()-1; i++){
+//
+//            if(Character.valueOf(s.charAt(0))>Character.valueOf(s.charAt(0))){
+//                System.out.print("test");
+//            }
+//
+//
+//
+//
+//
+//        }
+//        System.out.print(news);
+//
+//
+//    }
+//}
