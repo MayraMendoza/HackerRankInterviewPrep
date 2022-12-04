@@ -45,3 +45,44 @@ public class MissingNumbers {
     }
 
 }
+
+//
+//    public static List<Integer> missingNumbers(List<Integer> arr, List<Integer> brr) {
+//        // Write your code here
+//
+//        Collections.sort(arr);
+//        System.out.print(arr);
+//        Collections.sort(brr);
+//        System.out.print(brr);
+//
+//
+//        //find which elements in the second array are missing from the first array.
+//        ArrayList<Integer> missingNum = new ArrayList<Integer>();
+//        int count =0;
+//        for (int i=0; i<arr.size(); i++){
+//            int k =0;
+//            for( int j=k+i ; j<brr.size(); j++){
+//                if( (brr.get(i)).equals(arr.get(j)) ){
+//                    System.out.println("mathced "+ i +" "+j);
+//                    // k++;
+//
+//                    break;
+//
+//                }else{
+//                    System.out.println("meow");
+//                    System.out.println(j+ " no match");
+//                    missingNum.add(brr.get(j));
+//                    k++;
+//                    System.out.print(k + "k");
+//
+//
+//
+//                }
+//
+//                break;
+//            }
+//
+//        }
+//        return missingNum;
+//
+//    }
